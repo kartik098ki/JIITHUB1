@@ -14,107 +14,180 @@
       --muted:#a3adc8;
       --accent:#7c5cff;
       --radius:14px;
-      --shadow:0 40px 80px -20px rgba(0,0,0,.35);
+      --shadow:0 30px 60px -10px rgba(0,0,0,.35);
       --gradient:linear-gradient(135deg,#7c5cff 0%,#3ad7f1 100%);
       font-family: 'Inter', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+      --transition:.3s cubic-bezier(.25,.8,.25,1);
     }
     *{box-sizing:border-box;}
     body{
       margin:0;
       background:var(--bg);
       color:var(--text);
-      line-height:1.5;
+      line-height:1.4;
+      -webkit-font-smoothing:antialiased;
     }
     a{color:inherit; text-decoration:none;}
     .container{max-width:1100px; margin:0 auto; padding:0 1rem;}
     .btn{
-      padding:.75rem 1.4rem;
+      padding:.65rem 1.2rem;
       border:none;
       cursor:pointer;
       border-radius:999px;
       font-weight:600;
       background:var(--gradient);
       color:#fff;
-      transition:.3s;
+      transition:var(--transition);
+      display:inline-block;
+      text-align:center;
     }
     .btn:hover{filter:brightness(1.05);}
     .card{
       background:var(--card);
       border-radius:var(--radius);
-      padding:1.5rem;
+      padding:1.3rem;
       box-shadow:var(--shadow);
       margin-bottom:1rem;
       position:relative;
       overflow:hidden;
+      transition:var(--transition);
     }
-    h1{font-size:2.6rem; margin:0;}
-    h2{font-size:2rem; margin:0 0 .5rem;}
-    h3{font-size:1.2rem; margin:0 0 .5rem;}
-    p{margin:0 0 1rem; font-size:1rem;}
-    .small{font-size:.85rem; color:rgba(163,173,200,.9);}
-    .grid{display:grid; gap:1.5rem;}
-    .nav{display:flex; justify-content:space-between; align-items:center; padding:1rem 0; flex-wrap:wrap; gap:8px;}
-    .links{display:flex; gap:1rem; flex-wrap:wrap;}
+    h1{font-size:2.2rem; margin:0; line-height:1.1;}
+    h2{font-size:1.8rem; margin:0 0 .5rem;}
+    h3{font-size:1.1rem; margin:0 0 .5rem;}
+    p{margin:0 0 1rem; font-size:0.95rem;}
+    .small{font-size:.75rem; color:rgba(163,173,200,.9);}
+    .grid{display:grid; gap:1rem;}
+    .nav{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:1rem 0;
+      flex-wrap:wrap;
+      gap:8px;
+      position:relative;
+    }
+    .brand{font-weight:700; font-size:1.1rem; display:flex; align-items:center; gap:6px;}
+    .links{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      align-items:center;
+    }
     .input{
       width:100%;
-      padding:12px 16px;
+      padding:10px 14px;
       border-radius:10px;
       border:none;
       background:#1f2336;
       color:var(--text);
-      font-size:1rem;
+      font-size:.9rem;
       outline:none;
       margin-top:6px;
+      resize:vertical;
     }
-    .section{padding:4rem 0;}
-    .badge{background:rgba(124,92,255,.2); padding:6px 14px; border-radius:999px; font-size:.6rem; display:inline-block; margin-bottom:6px;}
+    .section{padding:3rem 0;}
+    .badge{background:rgba(124,92,255,.2); padding:5px 12px; border-radius:999px; font-size:.55rem; display:inline-block; margin-bottom:6px;}
+    .flex{display:flex; gap:12px; align-items:center;}
+    .team-grid, .cards-2, .cards-3 {display:grid; gap:16px;}
+    .nav-toggle{
+      display:none;
+      background:none;
+      border:none;
+      cursor:pointer;
+      padding:8px;
+      position:relative;
+    }
+    .nav-toggle div{
+      width:24px;
+      height:3px;
+      background:var(--text);
+      margin:5px 0;
+      border-radius:2px;
+      transition:transform .3s, opacity .3s;
+    }
+    /* mobile menu hidden by default */
+    .mobile-menu{display:none; width:100%; margin-top:8px;}
+    .pill{background:rgba(255,255,255,.08); padding:4px 12px; border-radius:999px; font-size:.55rem;}
     @media (min-width:768px){
-      .two{grid-template-columns:repeat(2,1fr);}
-      .three{grid-template-columns:repeat(3,1fr);}
+      .hero{display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:start;}
+      .cards-2{grid-template-columns:repeat(2,1fr);}
+      .cards-3{grid-template-columns:repeat(3,1fr);}
+      .team-grid{grid-template-columns:repeat(3,1fr);}
+      .mobile-menu{display:none!important;}
+      .links{display:flex;}
+      .nav-toggle{display:none;}
     }
+    @media (max-width:767px){
+      h1{font-size:2rem;}
+      h2{font-size:1.5rem;}
+      .cards-2, .cards-3, .team-grid{grid-template-columns:1fr;}
+      .nav-toggle{display:block;}
+      .links{display:none;}
+      .mobile-menu{display:block;}
+    }
+    .hidden{display:none!important;}
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Navbar -->
     <nav class="nav">
-      <div style="font-weight:700; font-size:1.2rem;">Innovation Hub (Student E-Cell Style)</div>
-      <div class="links">
+      <div class="brand">
+        <div>🚀 Innovation Hub</div><div class="pill">Student E-Cell</div>
+      </div>
+      <div class="links" id="desktopLinks">
         <a href="#home">Home</a>
         <a href="#startups">Startups</a>
         <a href="#hackathons">Hackathons</a>
         <a href="#resources">Resources</a>
         <a href="#team">Team</a>
         <a href="#contact">Contact</a>
+        <button class="btn" style="padding:.5rem 1rem;font-size:.8rem;">Login</button>
       </div>
-      <div>
-        <button class="btn">Login / Dashboard</button>
+      <button class="nav-toggle" id="menuBtn" aria-label="menu">
+        <div></div>
+        <div></div>
+        <div></div>
+      </button>
+      <div class="mobile-menu" id="mobileMenu">
+        <div style="display:flex; flex-direction:column; gap:10px; padding:10px 0;">
+          <a href="#home">Home</a>
+          <a href="#startups">Startups</a>
+          <a href="#hackathons">Hackathons</a>
+          <a href="#resources">Resources</a>
+          <a href="#team">Team</a>
+          <a href="#contact">Contact</a>
+          <button class="btn" style="width:100%; margin-top:4px;">Login</button>
+        </div>
       </div>
     </nav>
 
     <!-- Hero -->
     <section class="section" id="home">
-      <div class="grid two" style="align-items:center; gap:2rem;">
-        <div>
-          <div class="badge">Student Built</div>
-          <h1>Support. Build. Launch.</h1>
-          <p>Innovation Hub is a student-run startup & hackathon platform at JIIT. We help founders refine ideas, connect with peers, run challenges, and get early support.</p>
-          <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <button class="btn">Apply Your Startup</button>
-            <button class="btn" style="background:rgba(255,255,255,.08);">Join Hackathon</button>
-          </div>
-        </div>
-        <div>
-          <div class="card">
-            <h2>Current Startup Spotlight</h2>
-            <p class="small">Team: Campus Skill Swap</p>
-            <p>Peer-to-peer skill exchange platform helping students collaborate and earn reputation.</p>
-            <div style="display:flex; gap:10px; flex-wrap:wrap; font-size:.9rem;">
-              <div><strong>Stage:</strong> Validation</div>
-              <div><strong>Submitted:</strong> 5 days ago</div>
+      <div class="hero">
+        <div class="grid" style="gap:1.5rem;">
+          <div>
+            <div class="badge">Student Built</div>
+            <h1>Support. Build. Launch.</h1>
+            <p>Innovation Hub is a student-run startup & hackathon platform at JIIT. Apply your startup, join sprints, and get early feedback from peers.</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap;">
+              <button class="btn" style="flex:1; min-width:140px;">Apply Your Startup</button>
+              <button class="btn" style="flex:1; min-width:140px; background:rgba(255,255,255,.08);">Join Hackathon</button>
             </div>
-            <div style="margin-top:10px;">
-              <button class="btn">View Details</button>
+          </div>
+          <div>
+            <div class="card">
+              <h2 style="margin-top:0;">Current Startup Spotlight</h2>
+              <p class="small">Team: Campus Skill Swap</p>
+              <p>Peer-to-peer skill exchange platform helping students collaborate and earn reputation.</p>
+              <div class="flex" style="font-size:.85rem;">
+                <div><strong>Stage:</strong> Validation</div>
+                <div><strong>Submitted:</strong> 5 days ago</div>
+              </div>
+              <div style="margin-top:10px;">
+                <button class="btn">View Details</button>
+              </div>
             </div>
           </div>
         </div>
@@ -125,21 +198,21 @@
     <section class="section" id="startups">
       <div>
         <h2>Startup Programs</h2>
-        <p class="small">Submit your startup idea to get feedback, incubation support, and access to student resources.</p>
-        <div class="grid two" style="gap:2rem;">
+        <p class="small">Submit your startup idea to get feedback, early validation, and access to student-run support.</p>
+        <div class="cards-2">
           <div class="card">
             <h3>Apply Your Startup</h3>
-            <p class="small">Quick form to register your team and idea.</p>
+            <p class="small">Register your team and core idea.</p>
             <form id="startup-form">
-              <div>
+              <div style="margin-bottom:10px;">
                 <label>Name of Startup</label>
-                <input class="input" name="name" placeholder="Example: SkillSwap" required />
+                <input class="input" name="name" placeholder="SkillSwap" required />
               </div>
-              <div>
+              <div style="margin-bottom:10px;">
                 <label>Problem You're Solving</label>
                 <textarea class="input" name="problem" rows="3" placeholder="Describe the core problem" required></textarea>
               </div>
-              <div style="display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
+              <div style="display:grid; gap:12px; grid-template-columns:1fr 1fr; margin-bottom:10px;">
                 <div>
                   <label>Stage</label>
                   <select class="input" name="stage">
@@ -151,15 +224,15 @@
                 </div>
                 <div>
                   <label>Founders</label>
-                  <input class="input" name="founders" placeholder="Names separated by commas" required />
+                  <input class="input" name="founders" placeholder="Names, comma separated" required />
                 </div>
               </div>
-              <div>
+              <div style="margin-bottom:10px;">
                 <label>Contact Email</label>
                 <input class="input" name="email" type="email" placeholder="you@domain.com" required />
               </div>
-              <div style="margin-top:12px;">
-                <button class="btn" type="submit">Submit Startup</button>
+              <div>
+                <button class="btn" type="submit" style="width:100%;">Submit Startup</button>
               </div>
               <div id="startup-msg" class="small" style="margin-top:6px;"></div>
             </form>
@@ -167,13 +240,13 @@
           <div class="card">
             <h3>What You Get</h3>
             <ul style="padding-left:1rem;">
-              <li>Feedback from peers</li>
-              <li>Early-stage validation help</li>
-              <li>Access to student network</li>
-              <li>Invitation to internal hackathons</li>
-              <li>Showcase in demo day</li>
+              <li>Peer feedback</li>
+              <li>Validation help</li>
+              <li>Access to student community</li>
+              <li>Hackathon invitations</li>
+              <li>Demo day showcase</li>
             </ul>
-            <p class="small">You can upgrade later with mentors, pitch decks, and demo support.</p>
+            <p class="small">Later you can add mentors, pitch refinement, and funding prep.</p>
           </div>
         </div>
       </div>
@@ -183,24 +256,24 @@
     <section class="section" id="hackathons">
       <div>
         <h2>Hackathons & Challenges</h2>
-        <p class="small">Regular sprint events where teams build, pitch, and win support.</p>
-        <div class="grid three" style="gap:16px;">
+        <p class="small">Sprint events where ideas turn into prototypes.</p>
+        <div class="cards-3">
           <div class="card">
             <div class="badge">Hackathon</div>
             <h3>Pioneers Paradise 2025</h3>
-            <p class="small">24 Aug | Oscar Luxe Club | 48-hour innovation sprint with prizes & incubation entries.</p>
+            <p class="small">24 Aug | Oscar Luxe Club | 48-hour innovation sprint with prizes.</p>
             <button class="btn">Register Now</button>
           </div>
           <div class="card">
             <div class="badge">Challenge</div>
-            <h3>Student Startup Sprint</h3>
-            <p class="small">10 Sept | Idea refinement + quick MVP showcase. Top 5 get spotlight.</p>
+            <h3>Startup Sprint</h3>
+            <p class="small">10 Sept | Quick MVP build + pitch. Top 5 featured.</p>
             <button class="btn">Apply</button>
           </div>
           <div class="card">
-            <div class="badge">Mini-Event</div>
+            <div class="badge">Mini</div>
             <h3>Pitch Feedback Circle</h3>
-            <p class="small">Every Friday | Share your idea and get crowd feedback in 5 mins.</p>
+            <p class="small">Weekly | Share idea, get 5-min feedback.</p>
             <button class="btn">Join</button>
           </div>
         </div>
@@ -211,19 +284,19 @@
     <section class="section" id="resources">
       <div>
         <h2>Resources</h2>
-        <p class="small">Tools and templates to help your startup grow.</p>
-        <div class="grid three" style="gap:16px;">
+        <p class="small">Templates and guides for founders.</p>
+        <div class="cards-3">
           <div class="card">
             <h3>Validation Template</h3>
-            <p class="small">Step-by-step checklist to validate customer problem.</p>
+            <p class="small">Checklist to test demand before building.</p>
           </div>
           <div class="card">
             <h3>Pitch Deck Guide</h3>
-            <p class="small">What investors want to see—one pager + slides.</p>
+            <p class="small">What to include for early demos.</p>
           </div>
           <div class="card">
-            <h3>Founder Handbook</h3>
-            <p class="small">Roles, equity split ideas, team collaboration tips.</p>
+            <h3>Founder Tips</h3>
+            <p class="small">Team roles, equity basics, collaboration hacks.</p>
           </div>
         </div>
       </div>
@@ -233,19 +306,19 @@
     <section class="section" id="team">
       <div>
         <h2>Team</h2>
-        <p class="small">Students building and running this Hub.</p>
-        <div class="grid three" style="gap:16px;">
+        <p class="small">The students building & running this hub.</p>
+        <div class="team-grid">
           <div class="card">
             <h3>Rahul Verma</h3>
             <p class="small">UI/UX & Design</p>
           </div>
           <div class="card">
             <h3>Simran Kaur</h3>
-            <p class="small">Startup Operations</p>
+            <p class="small">Operations</p>
           </div>
           <div class="card">
             <h3>Akshay Singh</h3>
-            <p class="small">Deployment & Tools</p>
+            <p class="small">Deployment</p>
           </div>
         </div>
       </div>
@@ -255,9 +328,9 @@
     <section class="section" id="contact">
       <div class="card">
         <h2>Contact the Team</h2>
-        <p class="small">Want to collaborate, volunteer, or get featured? Drop a message.</p>
+        <p class="small">Want to help, collaborate, or get featured? Message us.</p>
         <form id="contact-form">
-          <div style="display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+          <div style="display:grid; gap:12px; grid-template-columns:1fr 1fr;">
             <div>
               <label>Name</label>
               <input class="input" name="name" required />
@@ -267,7 +340,7 @@
               <input class="input" type="email" name="email" required />
             </div>
           </div>
-          <div style="margin-top:12px;">
+          <div style="margin-top:10px;">
             <label>Message</label>
             <textarea class="input" name="message" rows="4" required></textarea>
           </div>
@@ -282,15 +355,26 @@
   </div>
 
   <script>
-    // handle startup form (placeholder, you can hook to backend/Supabase)
-    document.getElementById('startup-form').addEventListener('submit', function(e){
-      e.preventDefault();
-      document.getElementById('startup-msg').textContent = 'Submitted! (Hook this to backend later)';
+    // mobile menu toggle
+    const menuBtn = document.getElementById('menuBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    let open = false;
+    menuBtn.addEventListener('click', () => {
+      open = !open;
+      if (open) mobileMenu.classList.remove('hidden');
+      else mobileMenu.classList.add('hidden');
     });
-    document.getElementById('contact-form').addEventListener('submit', function(e){
+
+    // placeholder form handlers
+    document.getElementById('startup-form')?.addEventListener('submit', function(e){
       e.preventDefault();
-      document.getElementById('contact-msg').textContent = 'Message sent! (Replace with real submission)';
+      document.getElementById('startup-msg').textContent = 'Thanks! Your startup was submitted (hook this to backend).';
+    });
+    document.getElementById('contact-form')?.addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('contact-msg').textContent = 'Message received! (replace with actual submission logic).';
     });
   </script>
 </body>
 </html>
+

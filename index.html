@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Innovation Hub - Startup & Hackathons</title>
+  <meta name="description" content="Student-run Innovation Hub for JIIT: startup support, hackathons, incubation, collaboration." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:#0f111a;
+      --card:#1f2336;
+      --text:#f0f6fc;
+      --muted:#a3adc8;
+      --accent:#7c5cff;
+      --radius:14px;
+      --shadow:0 40px 80px -20px rgba(0,0,0,.35);
+      --gradient:linear-gradient(135deg,#7c5cff 0%,#3ad7f1 100%);
+      font-family: 'Inter', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
+    }
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none;}
+    .container{max-width:1100px; margin:0 auto; padding:0 1rem;}
+    .btn{
+      padding:.75rem 1.4rem;
+      border:none;
+      cursor:pointer;
+      border-radius:999px;
+      font-weight:600;
+      background:var(--gradient);
+      color:#fff;
+      transition:.3s;
+    }
+    .btn:hover{filter:brightness(1.05);}
+    .card{
+      background:var(--card);
+      border-radius:var(--radius);
+      padding:1.5rem;
+      box-shadow:var(--shadow);
+      margin-bottom:1rem;
+      position:relative;
+      overflow:hidden;
+    }
+    h1{font-size:2.6rem; margin:0;}
+    h2{font-size:2rem; margin:0 0 .5rem;}
+    h3{font-size:1.2rem; margin:0 0 .5rem;}
+    p{margin:0 0 1rem; font-size:1rem;}
+    .small{font-size:.85rem; color:rgba(163,173,200,.9);}
+    .grid{display:grid; gap:1.5rem;}
+    .nav{display:flex; justify-content:space-between; align-items:center; padding:1rem 0; flex-wrap:wrap; gap:8px;}
+    .links{display:flex; gap:1rem; flex-wrap:wrap;}
+    .input{
+      width:100%;
+      padding:12px 16px;
+      border-radius:10px;
+      border:none;
+      background:#1f2336;
+      color:var(--text);
+      font-size:1rem;
+      outline:none;
+      margin-top:6px;
+    }
+    .section{padding:4rem 0;}
+    .badge{background:rgba(124,92,255,.2); padding:6px 14px; border-radius:999px; font-size:.6rem; display:inline-block; margin-bottom:6px;}
+    @media (min-width:768px){
+      .two{grid-template-columns:repeat(2,1fr);}
+      .three{grid-template-columns:repeat(3,1fr);}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Navbar -->
+    <nav class="nav">
+      <div style="font-weight:700; font-size:1.2rem;">Innovation Hub (Student E-Cell Style)</div>
+      <div class="links">
+        <a href="#home">Home</a>
+        <a href="#startups">Startups</a>
+        <a href="#hackathons">Hackathons</a>
+        <a href="#resources">Resources</a>
+        <a href="#team">Team</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <div>
+        <button class="btn">Login / Dashboard</button>
+      </div>
+    </nav>
+
+    <!-- Hero -->
+    <section class="section" id="home">
+      <div class="grid two" style="align-items:center; gap:2rem;">
+        <div>
+          <div class="badge">Student Built</div>
+          <h1>Support. Build. Launch.</h1>
+          <p>Innovation Hub is a student-run startup & hackathon platform at JIIT. We help founders refine ideas, connect with peers, run challenges, and get early support.</p>
+          <div style="display:flex; gap:12px; flex-wrap:wrap;">
+            <button class="btn">Apply Your Startup</button>
+            <button class="btn" style="background:rgba(255,255,255,.08);">Join Hackathon</button>
+          </div>
+        </div>
+        <div>
+          <div class="card">
+            <h2>Current Startup Spotlight</h2>
+            <p class="small">Team: Campus Skill Swap</p>
+            <p>Peer-to-peer skill exchange platform helping students collaborate and earn reputation.</p>
+            <div style="display:flex; gap:10px; flex-wrap:wrap; font-size:.9rem;">
+              <div><strong>Stage:</strong> Validation</div>
+              <div><strong>Submitted:</strong> 5 days ago</div>
+            </div>
+            <div style="margin-top:10px;">
+              <button class="btn">View Details</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Startup Submission -->
+    <section class="section" id="startups">
+      <div>
+        <h2>Startup Programs</h2>
+        <p class="small">Submit your startup idea to get feedback, incubation support, and access to student resources.</p>
+        <div class="grid two" style="gap:2rem;">
+          <div class="card">
+            <h3>Apply Your Startup</h3>
+            <p class="small">Quick form to register your team and idea.</p>
+            <form id="startup-form">
+              <div>
+                <label>Name of Startup</label>
+                <input class="input" name="name" placeholder="Example: SkillSwap" required />
+              </div>
+              <div>
+                <label>Problem You're Solving</label>
+                <textarea class="input" name="problem" rows="3" placeholder="Describe the core problem" required></textarea>
+              </div>
+              <div style="display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
+                <div>
+                  <label>Stage</label>
+                  <select class="input" name="stage">
+                    <option>Idea</option>
+                    <option>Validation</option>
+                    <option>Prototype</option>
+                    <option>Early Revenue</option>
+                  </select>
+                </div>
+                <div>
+                  <label>Founders</label>
+                  <input class="input" name="founders" placeholder="Names separated by commas" required />
+                </div>
+              </div>
+              <div>
+                <label>Contact Email</label>
+                <input class="input" name="email" type="email" placeholder="you@domain.com" required />
+              </div>
+              <div style="margin-top:12px;">
+                <button class="btn" type="submit">Submit Startup</button>
+              </div>
+              <div id="startup-msg" class="small" style="margin-top:6px;"></div>
+            </form>
+          </div>
+          <div class="card">
+            <h3>What You Get</h3>
+            <ul style="padding-left:1rem;">
+              <li>Feedback from peers</li>
+              <li>Early-stage validation help</li>
+              <li>Access to student network</li>
+              <li>Invitation to internal hackathons</li>
+              <li>Showcase in demo day</li>
+            </ul>
+            <p class="small">You can upgrade later with mentors, pitch decks, and demo support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hackathons -->
+    <section class="section" id="hackathons">
+      <div>
+        <h2>Hackathons & Challenges</h2>
+        <p class="small">Regular sprint events where teams build, pitch, and win support.</p>
+        <div class="grid three" style="gap:16px;">
+          <div class="card">
+            <div class="badge">Hackathon</div>
+            <h3>Pioneers Paradise 2025</h3>
+            <p class="small">24 Aug | Oscar Luxe Club | 48-hour innovation sprint with prizes & incubation entries.</p>
+            <button class="btn">Register Now</button>
+          </div>
+          <div class="card">
+            <div class="badge">Challenge</div>
+            <h3>Student Startup Sprint</h3>
+            <p class="small">10 Sept | Idea refinement + quick MVP showcase. Top 5 get spotlight.</p>
+            <button class="btn">Apply</button>
+          </div>
+          <div class="card">
+            <div class="badge">Mini-Event</div>
+            <h3>Pitch Feedback Circle</h3>
+            <p class="small">Every Friday | Share your idea and get crowd feedback in 5 mins.</p>
+            <button class="btn">Join</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resources -->
+    <section class="section" id="resources">
+      <div>
+        <h2>Resources</h2>
+        <p class="small">Tools and templates to help your startup grow.</p>
+        <div class="grid three" style="gap:16px;">
+          <div class="card">
+            <h3>Validation Template</h3>
+            <p class="small">Step-by-step checklist to validate customer problem.</p>
+          </div>
+          <div class="card">
+            <h3>Pitch Deck Guide</h3>
+            <p class="small">What investors want to see—one pager + slides.</p>
+          </div>
+          <div class="card">
+            <h3>Founder Handbook</h3>
+            <p class="small">Roles, equity split ideas, team collaboration tips.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Team -->
+    <section class="section" id="team">
+      <div>
+        <h2>Team</h2>
+        <p class="small">Students building and running this Hub.</p>
+        <div class="grid three" style="gap:16px;">
+          <div class="card">
+            <h3>Rahul Verma</h3>
+            <p class="small">UI/UX & Design</p>
+          </div>
+          <div class="card">
+            <h3>Simran Kaur</h3>
+            <p class="small">Startup Operations</p>
+          </div>
+          <div class="card">
+            <h3>Akshay Singh</h3>
+            <p class="small">Deployment & Tools</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section" id="contact">
+      <div class="card">
+        <h2>Contact the Team</h2>
+        <p class="small">Want to collaborate, volunteer, or get featured? Drop a message.</p>
+        <form id="contact-form">
+          <div style="display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr));">
+            <div>
+              <label>Name</label>
+              <input class="input" name="name" required />
+            </div>
+            <div>
+              <label>Email</label>
+              <input class="input" type="email" name="email" required />
+            </div>
+          </div>
+          <div style="margin-top:12px;">
+            <label>Message</label>
+            <textarea class="input" name="message" rows="4" required></textarea>
+          </div>
+          <div style="margin-top:12px;">
+            <button class="btn" type="submit">Send</button>
+          </div>
+          <div id="contact-msg" class="small" style="margin-top:6px;"></div>
+        </form>
+        <p class="small" style="margin-top:16px;">© 2025 Innovation Hub Student Startup & Hackathon Project. Made at JIIT Noida.</p>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // handle startup form (placeholder, you can hook to backend/Supabase)
+    document.getElementById('startup-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('startup-msg').textContent = 'Submitted! (Hook this to backend later)';
+    });
+    document.getElementById('contact-form').addEventListener('submit', function(e){
+      e.preventDefault();
+      document.getElementById('contact-msg').textContent = 'Message sent! (Replace with real submission)';
+    });
+  </script>
+</body>
+</html>

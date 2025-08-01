@@ -3,21 +3,20 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Innovation Hub - Startup & Hackathons</title>
-  <meta name="description" content="Student-run Innovation Hub for JIIT: startup support, hackathons, incubation, collaboration." />
+  <title>Innovation Hub | JIIT Student Startup</title>
+  <meta name="description" content="Student-run Innovation Hub for startups & hackathons at JIIT. Apply ideas, join sprints." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
   <style>
     :root {
       --bg:#0f111a;
       --card:#1f2336;
+      --radius:12px;
       --text:#f0f6fc;
-      --muted:#a3adc8;
+      --muted:#8a97b3;
       --accent:#7c5cff;
-      --radius:14px;
       --shadow:0 30px 60px -10px rgba(0,0,0,.35);
-      --gradient:linear-gradient(135deg,#7c5cff 0%,#3ad7f1 100%);
-      font-family: 'Inter', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
       --transition:.3s cubic-bezier(.25,.8,.25,1);
+      font-family: 'Inter', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
     }
     *{box-sizing:border-box;}
     body{
@@ -28,168 +27,154 @@
       -webkit-font-smoothing:antialiased;
     }
     a{color:inherit; text-decoration:none;}
-    .container{max-width:1100px; margin:0 auto; padding:0 1rem;}
+    .container{max-width:1000px; margin:0 auto; padding:0 16px;}
+    h1{font-size:1.9rem; margin:0 0 .25rem; line-height:1.1;}
+    h2{font-size:1.4rem; margin:0 0 .5rem; font-weight:600;}
+    p{margin:0 0 1rem; font-size:0.95rem;}
+    .small{font-size:.75rem; color:var(--muted);}
     .btn{
-      padding:.65rem 1.2rem;
-      border:none;
-      cursor:pointer;
-      border-radius:999px;
-      font-weight:600;
-      background:var(--gradient);
-      color:#fff;
-      transition:var(--transition);
       display:inline-block;
+      width:100%;
+      padding:14px;
+      border:none;
+      border-radius:999px;
+      background:var(--accent);
+      color:#fff;
+      font-weight:600;
+      font-size:0.95rem;
+      cursor:pointer;
+      transition:var(--transition);
       text-align:center;
+      margin-top:6px;
     }
-    .btn:hover{filter:brightness(1.05);}
+    .btn-light{
+      background:rgba(255,255,255,.08);
+      color:var(--text);
+    }
     .card{
       background:var(--card);
       border-radius:var(--radius);
-      padding:1.3rem;
+      padding:16px;
+      margin-bottom:16px;
       box-shadow:var(--shadow);
-      margin-bottom:1rem;
       position:relative;
       overflow:hidden;
       transition:var(--transition);
     }
-    h1{font-size:2.2rem; margin:0; line-height:1.1;}
-    h2{font-size:1.8rem; margin:0 0 .5rem;}
-    h3{font-size:1.1rem; margin:0 0 .5rem;}
-    p{margin:0 0 1rem; font-size:0.95rem;}
-    .small{font-size:.75rem; color:rgba(163,173,200,.9);}
-    .grid{display:grid; gap:1rem;}
+    .badge{
+      display:inline-block;
+      background:rgba(124,92,255,.2);
+      padding:5px 12px;
+      border-radius:999px;
+      font-size:.55rem;
+      margin-bottom:8px;
+    }
     .nav{
       display:flex;
       justify-content:space-between;
       align-items:center;
-      padding:1rem 0;
-      flex-wrap:wrap;
-      gap:8px;
+      padding:14px 0;
       position:relative;
     }
     .brand{font-weight:700; font-size:1.1rem; display:flex; align-items:center; gap:6px;}
-    .links{
-      display:flex;
-      gap:12px;
-      flex-wrap:wrap;
-      align-items:center;
-    }
-    .input{
-      width:100%;
-      padding:10px 14px;
-      border-radius:10px;
-      border:none;
-      background:#1f2336;
-      color:var(--text);
-      font-size:.9rem;
-      outline:none;
-      margin-top:6px;
-      resize:vertical;
-    }
-    .section{padding:3rem 0;}
-    .badge{background:rgba(124,92,255,.2); padding:5px 12px; border-radius:999px; font-size:.55rem; display:inline-block; margin-bottom:6px;}
-    .flex{display:flex; gap:12px; align-items:center;}
-    .team-grid, .cards-2, .cards-3 {display:grid; gap:16px;}
-    .nav-toggle{
-      display:none;
+    .menu-btn{
       background:none;
       border:none;
       cursor:pointer;
       padding:8px;
-      position:relative;
+      display:flex;
+      flex-direction:column;
+      gap:4px;
     }
-    .nav-toggle div{
+    .menu-btn span{
+      display:block;
       width:24px;
       height:3px;
       background:var(--text);
-      margin:5px 0;
       border-radius:2px;
       transition:transform .3s, opacity .3s;
     }
-    /* mobile menu hidden by default */
-    .mobile-menu{display:none; width:100%; margin-top:8px;}
-    .pill{background:rgba(255,255,255,.08); padding:4px 12px; border-radius:999px; font-size:.55rem;}
-    @media (min-width:768px){
-      .hero{display:grid; grid-template-columns:1fr 1fr; gap:2rem; align-items:start;}
-      .cards-2{grid-template-columns:repeat(2,1fr);}
-      .cards-3{grid-template-columns:repeat(3,1fr);}
-      .team-grid{grid-template-columns:repeat(3,1fr);}
-      .mobile-menu{display:none!important;}
-      .links{display:flex;}
-      .nav-toggle{display:none;}
+    .nav-links{
+      display:none;
+      flex-direction:column;
+      gap:12px;
+      margin-top:8px;
     }
-    @media (max-width:767px){
-      h1{font-size:2rem;}
-      h2{font-size:1.5rem;}
-      .cards-2, .cards-3, .team-grid{grid-template-columns:1fr;}
-      .nav-toggle{display:block;}
-      .links{display:none;}
-      .mobile-menu{display:block;}
+    .show{display:flex;}
+    .section{padding:24px 0;}
+    .input{
+      width:100%;
+      padding:12px 14px;
+      border:none;
+      border-radius:10px;
+      background:#1f2336;
+      color:var(--text);
+      font-size:0.95rem;
+      outline:none;
+      margin-top:6px;
+      resize:vertical;
     }
-    .hidden{display:none!important;}
+    .pill{
+      background:rgba(255,255,255,.08);
+      padding:6px 12px;
+      border-radius:999px;
+      font-size:.55rem;
+      display:inline-block;
+      margin-right:6px;
+    }
+    .flex{display:flex; gap:12px; flex-wrap:wrap;}
+    .startup-spotlight{
+      display:flex;
+      flex-direction:column;
+      gap:10px;
+    }
+    .inline-badges{display:flex; gap:6px; flex-wrap:wrap; font-size:.75rem; margin-top:6px;}
+    @media (min-width: 768px){
+      h1{font-size:2.4rem;}
+      h2{font-size:1.6rem;}
+      .nav-links{
+        display:flex!important;
+        flex-direction:row;
+        gap:16px;
+        align-items:center;
+        margin-top:0;
+      }
+      .menu-btn{display:none;}
+      .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:18px;}
+      .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
+      .startup-spotlight{flex-direction:row; justify-content:space-between; align-items:flex-start;}
+      .btn{width:auto; padding:12px 20px;}
+    }
   </style>
 </head>
 <body>
   <div class="container">
     <!-- Navbar -->
-    <nav class="nav">
-      <div class="brand">
-        <div>🚀 Innovation Hub</div><div class="pill">Student E-Cell</div>
-      </div>
-      <div class="links" id="desktopLinks">
+    <div class="nav">
+      <div class="brand">🚀 Innovation Hub (Student E-Cell)</div>
+      <button class="menu-btn" id="toggleMenu" aria-label="menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-links" id="navLinks">
         <a href="#home">Home</a>
         <a href="#startups">Startups</a>
         <a href="#hackathons">Hackathons</a>
         <a href="#resources">Resources</a>
         <a href="#team">Team</a>
         <a href="#contact">Contact</a>
-        <button class="btn" style="padding:.5rem 1rem;font-size:.8rem;">Login</button>
+        <button class="btn" style="margin:0;">Login</button>
       </div>
-      <button class="nav-toggle" id="menuBtn" aria-label="menu">
-        <div></div>
-        <div></div>
-        <div></div>
-      </button>
-      <div class="mobile-menu" id="mobileMenu">
-        <div style="display:flex; flex-direction:column; gap:10px; padding:10px 0;">
-          <a href="#home">Home</a>
-          <a href="#startups">Startups</a>
-          <a href="#hackathons">Hackathons</a>
-          <a href="#resources">Resources</a>
-          <a href="#team">Team</a>
-          <a href="#contact">Contact</a>
-          <button class="btn" style="width:100%; margin-top:4px;">Login</button>
-        </div>
-      </div>
-    </nav>
+    </div>
 
     <!-- Hero -->
     <section class="section" id="home">
-      <div class="hero">
-        <div class="grid" style="gap:1.5rem;">
-          <div>
-            <div class="badge">Student Built</div>
-            <h1>Support. Build. Launch.</h1>
-            <p>Innovation Hub is a student-run startup & hackathon platform at JIIT. Apply your startup, join sprints, and get early feedback from peers.</p>
-            <div style="display:flex; gap:10px; flex-wrap:wrap;">
-              <button class="btn" style="flex:1; min-width:140px;">Apply Your Startup</button>
-              <button class="btn" style="flex:1; min-width:140px; background:rgba(255,255,255,.08);">Join Hackathon</button>
-            </div>
-          </div>
-          <div>
-            <div class="card">
-              <h2 style="margin-top:0;">Current Startup Spotlight</h2>
-              <p class="small">Team: Campus Skill Swap</p>
-              <p>Peer-to-peer skill exchange platform helping students collaborate and earn reputation.</p>
-              <div class="flex" style="font-size:.85rem;">
-                <div><strong>Stage:</strong> Validation</div>
-                <div><strong>Submitted:</strong> 5 days ago</div>
-              </div>
-              <div style="margin-top:10px;">
-                <button class="btn">View Details</button>
-              </div>
-            </div>
-          </div>
+      <div class="card">
+        <div class="badge">Student Built</div>
+        <h1>Support. Build. Launch.</h1>
+        <p>Student-run Innovation Hub at JIIT helping founders with startup ideas, hackathons, and early validation.</p>
+        <div class="flex" style="gap:10px;">
+          <button class="btn">Apply Your Startup</button>
+          <button class="btn btn-light">Join Hackathon</button>
         </div>
       </div>
     </section>
@@ -197,56 +182,60 @@
     <!-- Startup Submission -->
     <section class="section" id="startups">
       <div>
-        <h2>Startup Programs</h2>
-        <p class="small">Submit your startup idea to get feedback, early validation, and access to student-run support.</p>
-        <div class="cards-2">
-          <div class="card">
-            <h3>Apply Your Startup</h3>
-            <p class="small">Register your team and core idea.</p>
-            <form id="startup-form">
-              <div style="margin-bottom:10px;">
-                <label>Name of Startup</label>
-                <input class="input" name="name" placeholder="SkillSwap" required />
+        <h2>Startup Program</h2>
+        <p class="small">Submit your idea, get early feedback, and join the student network.</p>
+        <div class="card">
+          <form id="startup-form">
+            <div style="margin-bottom:10px;">
+              <label>Name of Startup</label>
+              <input class="input" name="name" placeholder="Example: SkillSwap" required />
+            </div>
+            <div style="margin-bottom:10px;">
+              <label>Problem You're Solving</label>
+              <textarea class="input" name="problem" rows="3" placeholder="Describe the core problem" required></textarea>
+            </div>
+            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px;">
+              <div style="flex:1; min-width:140px;">
+                <label>Stage</label>
+                <select class="input" name="stage">
+                  <option>Idea</option>
+                  <option>Validation</option>
+                  <option>Prototype</option>
+                  <option>Early Revenue</option>
+                </select>
               </div>
-              <div style="margin-bottom:10px;">
-                <label>Problem You're Solving</label>
-                <textarea class="input" name="problem" rows="3" placeholder="Describe the core problem" required></textarea>
+              <div style="flex:1; min-width:140px;">
+                <label>Founders</label>
+                <input class="input" name="founders" placeholder="Names, comma separated" required />
               </div>
-              <div style="display:grid; gap:12px; grid-template-columns:1fr 1fr; margin-bottom:10px;">
-                <div>
-                  <label>Stage</label>
-                  <select class="input" name="stage">
-                    <option>Idea</option>
-                    <option>Validation</option>
-                    <option>Prototype</option>
-                    <option>Early Revenue</option>
-                  </select>
-                </div>
-                <div>
-                  <label>Founders</label>
-                  <input class="input" name="founders" placeholder="Names, comma separated" required />
-                </div>
-              </div>
-              <div style="margin-bottom:10px;">
-                <label>Contact Email</label>
-                <input class="input" name="email" type="email" placeholder="you@domain.com" required />
-              </div>
-              <div>
-                <button class="btn" type="submit" style="width:100%;">Submit Startup</button>
-              </div>
-              <div id="startup-msg" class="small" style="margin-top:6px;"></div>
-            </form>
+            </div>
+            <div style="margin-bottom:10px;">
+              <label>Contact Email</label>
+              <input class="input" name="email" type="email" placeholder="you@domain.com" required />
+            </div>
+            <button class="btn" type="submit">Submit Startup</button>
+            <div id="startup-msg" class="small" style="margin-top:6px;"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Spotlight -->
+    <section class="section" id="spotlight">
+      <div class="card">
+        <h2>Current Startup Spotlight</h2>
+        <div class="startup-spotlight">
+          <div>
+            <p class="small">Team: Campus Skill Swap</p>
+            <p>Peer-to-peer skill exchange platform helping students collaborate and earn reputation.</p>
+            <div class="inline-badges">
+              <div class="pill">Validation</div>
+              <div class="pill">Team: 3</div>
+              <div class="pill">Submitted: 5d ago</div>
+            </div>
           </div>
-          <div class="card">
-            <h3>What You Get</h3>
-            <ul style="padding-left:1rem;">
-              <li>Peer feedback</li>
-              <li>Validation help</li>
-              <li>Access to student community</li>
-              <li>Hackathon invitations</li>
-              <li>Demo day showcase</li>
-            </ul>
-            <p class="small">Later you can add mentors, pitch refinement, and funding prep.</p>
+          <div style="margin-top:8px;">
+            <button class="btn">View Details</button>
           </div>
         </div>
       </div>
@@ -255,25 +244,25 @@
     <!-- Hackathons -->
     <section class="section" id="hackathons">
       <div>
-        <h2>Hackathons & Challenges</h2>
-        <p class="small">Sprint events where ideas turn into prototypes.</p>
-        <div class="cards-3">
+        <h2>Hackathons & Sprints</h2>
+        <p class="small">Build fast, pitch early, win support.</p>
+        <div class="grid grid-3">
           <div class="card">
             <div class="badge">Hackathon</div>
             <h3>Pioneers Paradise 2025</h3>
-            <p class="small">24 Aug | Oscar Luxe Club | 48-hour innovation sprint with prizes.</p>
-            <button class="btn">Register Now</button>
+            <p class="small">24 Aug | Oscar Luxe Club | 48hr sprint + prizes</p>
+            <button class="btn">Register</button>
           </div>
           <div class="card">
             <div class="badge">Challenge</div>
             <h3>Startup Sprint</h3>
-            <p class="small">10 Sept | Quick MVP build + pitch. Top 5 featured.</p>
+            <p class="small">10 Sept | MVP build + showcase</p>
             <button class="btn">Apply</button>
           </div>
           <div class="card">
             <div class="badge">Mini</div>
-            <h3>Pitch Feedback Circle</h3>
-            <p class="small">Weekly | Share idea, get 5-min feedback.</p>
+            <h3>Pitch Feedback</h3>
+            <p class="small">Weekly quick feedback session</p>
             <button class="btn">Join</button>
           </div>
         </div>
@@ -284,19 +273,19 @@
     <section class="section" id="resources">
       <div>
         <h2>Resources</h2>
-        <p class="small">Templates and guides for founders.</p>
-        <div class="cards-3">
+        <p class="small">Templates & guides for early-stage founders.</p>
+        <div class="grid grid-3">
           <div class="card">
-            <h3>Validation Template</h3>
-            <p class="small">Checklist to test demand before building.</p>
+            <h3>Validation Checklist</h3>
+            <p class="small">Step-by-step to confirm the problem exists.</p>
           </div>
           <div class="card">
-            <h3>Pitch Deck Guide</h3>
-            <p class="small">What to include for early demos.</p>
+            <h3>Pitch Deck</h3>
+            <p class="small">What to include for your demo day.</p>
           </div>
           <div class="card">
-            <h3>Founder Tips</h3>
-            <p class="small">Team roles, equity basics, collaboration hacks.</p>
+            <h3>Team Tips</h3>
+            <p class="small">Roles, collaboration, equity basics.</p>
           </div>
         </div>
       </div>
@@ -306,11 +295,11 @@
     <section class="section" id="team">
       <div>
         <h2>Team</h2>
-        <p class="small">The students building & running this hub.</p>
-        <div class="team-grid">
+        <p class="small">Students building this platform.</p>
+        <div class="grid grid-3">
           <div class="card">
             <h3>Rahul Verma</h3>
-            <p class="small">UI/UX & Design</p>
+            <p class="small">Design & Frontend</p>
           </div>
           <div class="card">
             <h3>Simran Kaur</h3>
@@ -327,10 +316,10 @@
     <!-- Contact -->
     <section class="section" id="contact">
       <div class="card">
-        <h2>Contact the Team</h2>
-        <p class="small">Want to help, collaborate, or get featured? Message us.</p>
+        <h2>Contact</h2>
+        <p class="small">Want to join, help, or get featured? Send a message.</p>
         <form id="contact-form">
-          <div style="display:grid; gap:12px; grid-template-columns:1fr 1fr;">
+          <div style="display:flex; flex-direction:column; gap:12px;">
             <div>
               <label>Name</label>
               <input class="input" name="name" required />
@@ -339,42 +328,38 @@
               <label>Email</label>
               <input class="input" type="email" name="email" required />
             </div>
+            <div>
+              <label>Message</label>
+              <textarea class="input" name="message" rows="3" required></textarea>
+            </div>
           </div>
-          <div style="margin-top:10px;">
-            <label>Message</label>
-            <textarea class="input" name="message" rows="4" required></textarea>
-          </div>
-          <div style="margin-top:12px;">
-            <button class="btn" type="submit">Send</button>
-          </div>
+          <button class="btn" type="submit">Send</button>
           <div id="contact-msg" class="small" style="margin-top:6px;"></div>
         </form>
-        <p class="small" style="margin-top:16px;">© 2025 Innovation Hub Student Startup & Hackathon Project. Made at JIIT Noida.</p>
+        <p class="small" style="margin-top:14px;">© 2025 Innovation Hub Student Startup Project, JIIT Noida.</p>
       </div>
     </section>
   </div>
 
   <script>
-    // mobile menu toggle
-    const menuBtn = document.getElementById('menuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
-    let open = false;
-    menuBtn.addEventListener('click', () => {
-      open = !open;
-      if (open) mobileMenu.classList.remove('hidden');
-      else mobileMenu.classList.add('hidden');
+    // menu toggle
+    const toggle = document.getElementById('toggleMenu');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('show');
     });
 
     // placeholder form handlers
     document.getElementById('startup-form')?.addEventListener('submit', function(e){
       e.preventDefault();
-      document.getElementById('startup-msg').textContent = 'Thanks! Your startup was submitted (hook this to backend).';
+      document.getElementById('startup-msg').textContent = 'Thanks! Your startup idea is recorded (hook real backend later).';
     });
     document.getElementById('contact-form')?.addEventListener('submit', function(e){
       e.preventDefault();
-      document.getElementById('contact-msg').textContent = 'Message received! (replace with actual submission logic).';
+      document.getElementById('contact-msg').textContent = 'Message received! (connect to real API soon).';
     });
   </script>
 </body>
 </html>
+
 

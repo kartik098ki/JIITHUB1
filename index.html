@@ -38,7 +38,7 @@
             top: 0;
             width: 100%;
             padding: 1rem 5%;
-            background: rgba(10, 10, 26, 0.9);
+            background: rgba(10, 10, 26, 0.95);
             backdrop-filter: blur(10px);
             z-index: 1000;
             transition: all 0.3s ease;
@@ -48,6 +48,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
         }
 
         .logo {
@@ -69,10 +71,7 @@
         .nav-links {
             display: flex;
             list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 2rem;
+            gap: 2rem;
         }
 
         .nav-links a {
@@ -81,6 +80,7 @@
             font-weight: 600;
             transition: all 0.3s ease;
             position: relative;
+            font-size: 1rem;
         }
 
         .nav-links a:hover {
@@ -144,6 +144,7 @@
             color: var(--light);
             text-decoration: none;
             transition: all 0.3s ease;
+            font-size: 0.9rem;
         }
 
         .user-dropdown a:hover {
@@ -156,6 +157,7 @@
             display: none;
             flex-direction: column;
             cursor: pointer;
+            z-index: 1001;
         }
 
         .menu-toggle span {
@@ -219,7 +221,7 @@
         }
 
         .slide h1 {
-            font-size: 4rem;
+            font-size: clamp(2rem, 5vw, 4rem);
             font-weight: 900;
             margin-bottom: 1rem;
             background: var(--gradient);
@@ -231,7 +233,7 @@
         }
 
         .slide p {
-            font-size: 1.3rem;
+            font-size: clamp(1rem, 2vw, 1.3rem);
             margin-bottom: 2rem;
             opacity: 0.9;
             animation: slideInUp 1s ease-out 0.2s;
@@ -242,6 +244,7 @@
             display: flex;
             justify-content: center;
             gap: 1.5rem;
+            flex-wrap: wrap;
             animation: slideInUp 1s ease-out 0.4s;
             animation-fill-mode: both;
         }
@@ -336,10 +339,13 @@
         .dashboard-header {
             text-align: center;
             margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .dashboard-header h2 {
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 1rem;
             background: var(--gradient);
             -webkit-background-clip: text;
@@ -352,6 +358,9 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 3rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .stat-card {
@@ -362,6 +371,7 @@
             text-align: center;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
+            height: 100%;
         }
 
         .stat-card:hover {
@@ -380,28 +390,33 @@
         }
 
         .stat-card h3 {
-            font-size: 2rem;
+            font-size: 2.5rem;
             margin-bottom: 0.5rem;
             color: var(--accent);
         }
 
         .stat-card p {
             opacity: 0.8;
+            font-size: 1.1rem;
         }
 
         .user-activities {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .activity-card {
             background: var(--glass);
             backdrop-filter: blur(10px);
             border-radius: 15px;
-            padding: 1.5rem;
+            padding: 2rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             transition: all 0.3s ease;
+            height: 100%;
         }
 
         .activity-card:hover {
@@ -414,12 +429,15 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1rem;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .activity-title {
-            font-size: 1.2rem;
+            font-size: 1.3rem;
             font-weight: 600;
             color: var(--accent);
+            flex: 1;
         }
 
         .activity-status {
@@ -466,7 +484,7 @@
 
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
+            font-size: clamp(1.8rem, 4vw, 2.5rem);
             margin-bottom: 3rem;
             position: relative;
             display: inline-block;
@@ -498,7 +516,7 @@
         }
 
         .about-text h3 {
-            font-size: 1.8rem;
+            font-size: clamp(1.5rem, 3vw, 1.8rem);
             margin-bottom: 1rem;
             color: var(--accent);
         }
@@ -506,6 +524,7 @@
         .about-text p {
             margin-bottom: 1.5rem;
             opacity: 0.9;
+            font-size: 1.1rem;
         }
 
         .about-image {
@@ -581,6 +600,7 @@
 
         .feature-card p {
             opacity: 0.8;
+            font-size: 1rem;
         }
 
         /* Events Section */
@@ -722,15 +742,13 @@
             margin-bottom: 1rem;
             font-size: 0.9rem;
             opacity: 0.8;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .event-meta i {
             margin-right: 0.5rem;
             color: var(--primary);
-        }
-
-        .event-meta span {
-            margin-right: 1rem;
         }
 
         .event-content p {
@@ -758,6 +776,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
         }
 
         .event-prize {
@@ -858,6 +878,7 @@
             border-radius: 15px;
             padding: 2rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
         }
 
         .team-member:hover {
@@ -1195,6 +1216,7 @@
             transform: translateX(150%);
             transition: transform 0.3s ease;
             z-index: 1000;
+            max-width: 400px;
         }
 
         .toast.show {
@@ -1235,13 +1257,18 @@
         }
 
         /* Responsive Design */
-        @media (max-width: 992px) {
-            .about-content {
-                flex-direction: column;
+        @media (max-width: 1024px) {
+            .nav-links {
+                gap: 1.5rem;
             }
             
-            .slide h1 {
-                font-size: 3rem;
+            .nav-links a {
+                font-size: 0.9rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+                gap: 2rem;
             }
             
             .contact-form {
@@ -1258,34 +1285,118 @@
         }
 
         @media (max-width: 768px) {
+            header {
+                padding: 1rem 3%;
+            }
+
             .nav-links {
                 display: none;
             }
-            
+
             .user-menu {
                 display: none;
             }
-            
+
             .menu-toggle {
                 display: flex;
             }
-            
-            .slide h1 {
-                font-size: 2.5rem;
+
+            .slide-content {
+                padding: 0 1rem;
             }
-            
-            .slide p {
-                font-size: 1.1rem;
-            }
-            
+
             .cta-buttons {
                 flex-direction: column;
                 align-items: center;
+                gap: 1rem;
             }
-            
+
+            .btn {
+                width: 100%;
+                max-width: 300px;
+            }
+
+            .user-stats {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 1.5rem;
+            }
+
+            .user-activities {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+                gap: 1.5rem;
+            }
+
+            .events-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            }
+
+            .event-footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+            }
+
             .footer-links {
                 flex-direction: column;
                 gap: 1rem;
+            }
+
+            .social-footer {
+                gap: 1rem;
+            }
+
+            .toast {
+                left: 20px;
+                right: 20px;
+                max-width: none;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .user-stats {
+                grid-template-columns: 1fr;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .event-tabs {
+                gap: 0.5rem;
+            }
+
+            .tab-btn {
+                padding: 0.5rem 1rem;
+                font-size: 0.9rem;
+            }
+
+            .modal-content {
+                width: 95%;
+                padding: 1.5rem;
+            }
+
+            .stat-card {
+                padding: 1.5rem;
+            }
+
+            .stat-icon {
+                font-size: 2.5rem;
+            }
+
+            .stat-card h3 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -1317,13 +1428,26 @@
                     </div>
                 </div>
             </div>
-            <div class="menu-toggle">
+            <div class="menu-toggle" id="menuToggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </nav>
     </header>
+
+    <!-- Mobile Navigation Menu -->
+    <div id="mobileMenu" style="display: none; position: fixed; top: 70px; left: 0; width: 100%; background: rgba(10, 10, 26, 0.98); backdrop-filter: blur(10px); z-index: 999; padding: 1rem 0; box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);">
+        <ul style="list-style: none; padding: 0; margin: 0;">
+            <li style="padding: 0.8rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);"><a href="#home" style="color: var(--light); text-decoration: none; font-weight: 600; font-size: 1rem;">Home</a></li>
+            <li style="padding: 0.8rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);"><a href="#about" style="color: var(--light); text-decoration: none; font-weight: 600; font-size: 1rem;">About</a></li>
+            <li style="padding: 0.8rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);"><a href="#features" style="color: var(--light); text-decoration: none; font-weight: 600; font-size: 1rem;">Features</a></li>
+            <li style="padding: 0.8rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);"><a href="#events" style="color: var(--light); text-decoration: none; font-weight: 600; font-size: 1rem;">Events</a></li>
+            <li style="padding: 0.8rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);"><a href="#projects" style="color: var(--light); text-decoration: none; font-weight: 600; font-size: 1rem;">Projects</a></li>
+            <li style="padding: 0.8rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.1);"><a href="#team" style="color: var(--light); text-decoration: none; font-weight: 600; font-size: 1rem;">Team</a></li>
+            <li style="padding: 0.8rem 1.5rem;"><a href="#contact" style="color: var(--light); text-decoration: none; font-weight: 600; font-size: 1rem;">Contact</a></li>
+        </ul>
+    </div>
 
     <!-- Hero Section with Slider -->
     <section id="home" class="hero">
@@ -2143,6 +2267,31 @@
                 });
             });
             
+            // Mobile menu toggle
+            const menuToggle = document.getElementById('menuToggle');
+            const mobileMenu = document.getElementById('mobileMenu');
+            let menuOpen = false;
+            
+            menuToggle.addEventListener('click', function() {
+                menuOpen = !menuOpen;
+                if (menuOpen) {
+                    mobileMenu.style.display = 'block';
+                    menuToggle.classList.add('open');
+                } else {
+                    mobileMenu.style.display = 'none';
+                    menuToggle.classList.remove('open');
+                }
+            });
+            
+            // Close mobile menu when clicking on a link
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.style.display = 'none';
+                    menuOpen = false;
+                    menuToggle.classList.remove('open');
+                });
+            });
+            
             // Tab functionality for events section
             const tabBtns = document.querySelectorAll('.tab-btn');
             const tabContents = document.querySelectorAll('.tab-content');
@@ -2265,8 +2414,11 @@
                     
                     const target = document.querySelector(this.getAttribute('href'));
                     if (target) {
+                        const headerHeight = document.querySelector('header').offsetHeight;
+                        const targetPosition = target.offsetTop - headerHeight;
+                        
                         window.scrollTo({
-                            top: target.offsetTop - 80,
+                            top: targetPosition,
                             behavior: 'smooth'
                         });
                     }
@@ -2342,33 +2494,12 @@
             window.addEventListener('scroll', function() {
                 const header = document.querySelector('header');
                 if (window.scrollY > 100) {
-                    header.style.background = 'rgba(10, 10, 26, 0.95)';
+                    header.style.background = 'rgba(10, 10, 26, 0.98)';
                     header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
                 } else {
-                    header.style.background = 'rgba(10, 10, 26, 0.9)';
+                    header.style.background = 'rgba(10, 10, 26, 0.95)';
                     header.style.boxShadow = 'none';
                 }
-            });
-            
-            // Mobile menu toggle
-            const menuToggle = document.querySelector('.menu-toggle');
-            const navLinks = document.querySelector('.nav-links');
-            
-            menuToggle.addEventListener('click', function() {
-                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.width = '100%';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.background = 'rgba(10, 10, 26, 0.95)';
-                navLinks.style.padding = '1rem 0';
-                navLinks.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
-                
-                navLinks.querySelectorAll('li').forEach(li => {
-                    li.style.margin = '0.5rem 0';
-                    li.style.textAlign = 'center';
-                });
             });
         });
     </script>

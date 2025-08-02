@@ -1,365 +1,2376 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Innovation Hub | JIIT Student Startup</title>
-  <meta name="description" content="Student-run Innovation Hub for startups & hackathons at JIIT. Apply ideas, join sprints." />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet" />
-  <style>
-    :root {
-      --bg:#0f111a;
-      --card:#1f2336;
-      --radius:12px;
-      --text:#f0f6fc;
-      --muted:#8a97b3;
-      --accent:#7c5cff;
-      --shadow:0 30px 60px -10px rgba(0,0,0,.35);
-      --transition:.3s cubic-bezier(.25,.8,.25,1);
-      font-family: 'Inter', system-ui,-apple-system,BlinkMacSystemFont,sans-serif;
-    }
-    *{box-sizing:border-box;}
-    body{
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      line-height:1.4;
-      -webkit-font-smoothing:antialiased;
-    }
-    a{color:inherit; text-decoration:none;}
-    .container{max-width:1000px; margin:0 auto; padding:0 16px;}
-    h1{font-size:1.9rem; margin:0 0 .25rem; line-height:1.1;}
-    h2{font-size:1.4rem; margin:0 0 .5rem; font-weight:600;}
-    p{margin:0 0 1rem; font-size:0.95rem;}
-    .small{font-size:.75rem; color:var(--muted);}
-    .btn{
-      display:inline-block;
-      width:100%;
-      padding:14px;
-      border:none;
-      border-radius:999px;
-      background:var(--accent);
-      color:#fff;
-      font-weight:600;
-      font-size:0.95rem;
-      cursor:pointer;
-      transition:var(--transition);
-      text-align:center;
-      margin-top:6px;
-    }
-    .btn-light{
-      background:rgba(255,255,255,.08);
-      color:var(--text);
-    }
-    .card{
-      background:var(--card);
-      border-radius:var(--radius);
-      padding:16px;
-      margin-bottom:16px;
-      box-shadow:var(--shadow);
-      position:relative;
-      overflow:hidden;
-      transition:var(--transition);
-    }
-    .badge{
-      display:inline-block;
-      background:rgba(124,92,255,.2);
-      padding:5px 12px;
-      border-radius:999px;
-      font-size:.55rem;
-      margin-bottom:8px;
-    }
-    .nav{
-      display:flex;
-      justify-content:space-between;
-      align-items:center;
-      padding:14px 0;
-      position:relative;
-    }
-    .brand{font-weight:700; font-size:1.1rem; display:flex; align-items:center; gap:6px;}
-    .menu-btn{
-      background:none;
-      border:none;
-      cursor:pointer;
-      padding:8px;
-      display:flex;
-      flex-direction:column;
-      gap:4px;
-    }
-    .menu-btn span{
-      display:block;
-      width:24px;
-      height:3px;
-      background:var(--text);
-      border-radius:2px;
-      transition:transform .3s, opacity .3s;
-    }
-    .nav-links{
-      display:none;
-      flex-direction:column;
-      gap:12px;
-      margin-top:8px;
-    }
-    .show{display:flex;}
-    .section{padding:24px 0;}
-    .input{
-      width:100%;
-      padding:12px 14px;
-      border:none;
-      border-radius:10px;
-      background:#1f2336;
-      color:var(--text);
-      font-size:0.95rem;
-      outline:none;
-      margin-top:6px;
-      resize:vertical;
-    }
-    .pill{
-      background:rgba(255,255,255,.08);
-      padding:6px 12px;
-      border-radius:999px;
-      font-size:.55rem;
-      display:inline-block;
-      margin-right:6px;
-    }
-    .flex{display:flex; gap:12px; flex-wrap:wrap;}
-    .startup-spotlight{
-      display:flex;
-      flex-direction:column;
-      gap:10px;
-    }
-    .inline-badges{display:flex; gap:6px; flex-wrap:wrap; font-size:.75rem; margin-top:6px;}
-    @media (min-width: 768px){
-      h1{font-size:2.4rem;}
-      h2{font-size:1.6rem;}
-      .nav-links{
-        display:flex!important;
-        flex-direction:row;
-        gap:16px;
-        align-items:center;
-        margin-top:0;
-      }
-      .menu-btn{display:none;}
-      .grid-2{display:grid; grid-template-columns:repeat(2,1fr); gap:18px;}
-      .grid-3{display:grid; grid-template-columns:repeat(3,1fr); gap:18px;}
-      .startup-spotlight{flex-direction:row; justify-content:space-between; align-items:flex-start;}
-      .btn{width:auto; padding:12px 20px;}
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovation Hub - College of Technology</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;900&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #6C63FF;
+            --secondary: #FF6584;
+            --dark: #0a0a1a;
+            --light: #f8f9fa;
+            --accent: #00d9ff;
+            --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --glass: rgba(255, 255, 255, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            overflow-x: hidden;
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 1rem 5%;
+            background: rgba(10, 10, 26, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo i {
+            margin-right: 0.5rem;
+            color: var(--accent);
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links li {
+            margin-left: 2rem;
+        }
+
+        .nav-links a {
+            color: var(--light);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .user-menu {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .user-avatar {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .user-dropdown {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 0.5rem 0;
+            min-width: 200px;
+            display: none;
+            z-index: 1001;
+        }
+
+        .user-dropdown.active {
+            display: block;
+        }
+
+        .user-dropdown a {
+            display: block;
+            padding: 0.7rem 1.5rem;
+            color: var(--light);
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .user-dropdown a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--accent);
+        }
+
+        /* Mobile Menu Toggle */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+
+        .menu-toggle span {
+            width: 25px;
+            height: 3px;
+            background: var(--light);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+
+        /* Hero Section with Slider */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .slider-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide.active {
+            opacity: 1;
+        }
+
+        .slide::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(rgba(10, 10, 26, 0.7), rgba(10, 10, 26, 0.9));
+        }
+
+        .slide-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            z-index: 2;
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .slide h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            line-height: 1.2;
+            animation: slideInUp 1s ease-out;
+        }
+
+        .slide p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            animation: slideInUp 1s ease-out 0.2s;
+            animation-fill-mode: both;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            animation: slideInUp 1s ease-out 0.4s;
+            animation-fill-mode: both;
+        }
+
+        .btn {
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateX(-100%);
+            transition: transform 0.5s;
+        }
+
+        .btn:hover::before {
+            transform: translateX(0);
+        }
+
+        .btn-primary {
+            background: var(--gradient);
+            color: white;
+            box-shadow: 0 4px 15px rgba(108, 99, 255, 0.4);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(108, 99, 255, 0.6);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: var(--dark);
+        }
+
+        .slider-nav {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 15px;
+            z-index: 3;
+        }
+
+        .slider-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.3);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .slider-dot.active {
+            background: var(--accent);
+            transform: scale(1.2);
+        }
+
+        /* User Dashboard Section */
+        .dashboard {
+            padding: 5rem 5%;
+            background: rgba(255, 255, 255, 0.03);
+            display: none;
+        }
+
+        .dashboard.active {
+            display: block;
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .dashboard-header h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .user-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .stat-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 217, 255, 0.2);
+            border-color: var(--accent);
+        }
+
+        .stat-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .stat-card h3 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .stat-card p {
+            opacity: 0.8;
+        }
+
+        .user-activities {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .activity-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 1.5rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .activity-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(108, 99, 255, 0.2);
+        }
+
+        .activity-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+
+        .activity-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .activity-status {
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .status-registered {
+            background: rgba(0, 217, 255, 0.2);
+            color: var(--accent);
+        }
+
+        .status-completed {
+            background: rgba(76, 175, 80, 0.2);
+            color: #4CAF50;
+        }
+
+        .status-upcoming {
+            background: rgba(255, 193, 7, 0.2);
+            color: #FFC107;
+        }
+
+        .activity-details {
+            margin-bottom: 1rem;
+        }
+
+        .activity-details p {
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .activity-details i {
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        /* About Section */
+        .about {
+            padding: 5rem 5%;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+            display: inline-block;
+            width: 100%;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--gradient);
+            border-radius: 2px;
+        }
+
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .about-text {
+            flex: 1;
+        }
+
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--accent);
+        }
+
+        .about-text p {
+            margin-bottom: 1.5rem;
+            opacity: 0.9;
+        }
+
+        .about-image {
+            flex: 1;
+            position: relative;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-image::before {
+            content: '';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: 20px;
+            bottom: 20px;
+            border: 3px solid var(--primary);
+            border-radius: 10px;
+            z-index: -1;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 5rem 5%;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 217, 255, 0.2);
+            border-color: var(--accent);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .feature-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .feature-card p {
+            opacity: 0.8;
+        }
+
+        /* Events Section */
+        .events {
+            padding: 5rem 5%;
+        }
+
+        .events-container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .event-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .tab-btn {
+            padding: 0.7rem 1.5rem;
+            background: transparent;
+            color: var(--light);
+            border: 2px solid var(--primary);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .tab-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        .tab-btn:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .events-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .event-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(108, 99, 255, 0.2);
+        }
+
+        .event-img {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .event-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .event-card:hover .event-img img {
+            transform: scale(1.1);
+        }
+
+        .event-date {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: var(--gradient);
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .event-date .day {
+            font-size: 1.2rem;
+            line-height: 1;
+        }
+
+        .event-date .month {
+            font-size: 0.8rem;
+            line-height: 1;
+        }
+
+        .event-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .event-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .event-meta {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        .event-meta i {
+            margin-right: 0.5rem;
+            color: var(--primary);
+        }
+
+        .event-meta span {
+            margin-right: 1rem;
+        }
+
+        .event-content p {
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+            flex-grow: 1;
+        }
+
+        .event-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .tag {
+            background: rgba(108, 99, 255, 0.2);
+            color: var(--accent);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+        }
+
+        .event-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .event-prize {
+            color: var(--secondary);
+            font-weight: 600;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 5rem 5%;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(108, 99, 255, 0.2);
+        }
+
+        .project-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .project-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .project-card:hover .project-img img {
+            transform: scale(1.1);
+        }
+
+        .project-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-content h3 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+            color: var(--accent);
+        }
+
+        .project-content p {
+            margin-bottom: 1rem;
+            opacity: 0.8;
+            flex-grow: 1;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        /* Team Section */
+        .team {
+            padding: 5rem 5%;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .team-member {
+            text-align: center;
+            transition: all 0.3s ease;
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(108, 99, 255, 0.2);
+        }
+
+        .member-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 1rem;
+            overflow: hidden;
+            border: 4px solid var(--primary);
+            box-shadow: 0 0 20px rgba(108, 99, 255, 0.3);
+        }
+
+        .member-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .member-info h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .member-info p {
+            color: var(--accent);
+            margin-bottom: 1rem;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--light);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 5rem 5%;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .contact-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .contact-form {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+
+        .form-group label {
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            color: var(--light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 150px;
+        }
+
+        .btn-submit {
+            grid-column: span 2;
+            justify-self: center;
+            padding: 0.8rem 3rem;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        footer {
+            padding: 3rem 5%;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-logo {
+            font-size: 2rem;
+            font-weight: 900;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            list-style: none;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: var(--light);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-footer {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+
+        .social-footer a {
+            color: var(--light);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .social-footer a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        .copyright {
+            opacity: 0.7;
+            font-size: 0.9rem;
+        }
+
+        /* Login/Register Modal */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2000;
+            display: none;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--glass);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 2rem;
+            width: 90%;
+            max-width: 400px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .modal-close:hover {
+            color: var(--secondary);
+        }
+
+        .modal-header {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-header h2 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            background: var(--gradient);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .modal-tabs {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .modal-tab {
+            padding: 0.5rem 1rem;
+            background: none;
+            border: none;
+            color: var(--light);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .modal-tab.active {
+            color: var(--accent);
+        }
+
+        .modal-tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .modal-form {
+            display: none;
+        }
+
+        .modal-form.active {
+            display: block;
+        }
+
+        .form-group-modal {
+            margin-bottom: 1rem;
+        }
+
+        .form-group-modal label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--accent);
+        }
+
+        .form-group-modal input {
+            width: 100%;
+            padding: 0.8rem;
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--light);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group-modal input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 10px rgba(0, 217, 255, 0.2);
+        }
+
+        .btn-modal {
+            width: 100%;
+            padding: 0.8rem;
+            margin-top: 1rem;
+            background: var(--gradient);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-modal:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 7px 20px rgba(108, 99, 255, 0.6);
+        }
+
+        /* Notification Toast */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--gradient);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: flex;
+            align-items: center;
+            transform: translateX(150%);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateX(0);
+        }
+
+        .toast i {
+            margin-right: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        /* Animations */
+        @keyframes slideInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+            100% {
+                transform: translateY(0) rotate(0deg);
+            }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .slide h1 {
+                font-size: 3rem;
+            }
+            
+            .contact-form {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            
+            .btn-submit {
+                grid-column: span 1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .user-menu {
+                display: none;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .slide h1 {
+                font-size: 2.5rem;
+            }
+            
+            .slide p {
+                font-size: 1.1rem;
+            }
+            
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Navbar -->
-    <div class="nav">
-      <div class="brand">🚀 Innovation Hub (Student E-Cell)</div>
-      <button class="menu-btn" id="toggleMenu" aria-label="menu">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="nav-links" id="navLinks">
-        <a href="#home">Home</a>
-        <a href="#startups">Startups</a>
-        <a href="#hackathons">Hackathons</a>
-        <a href="#resources">Resources</a>
-        <a href="#team">Team</a>
-        <a href="#contact">Contact</a>
-        <button class="btn" style="margin:0;">Login</button>
-      </div>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">
+                <i class="fas fa-lightbulb"></i>
+                Innovation Hub
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="user-menu">
+                <button class="btn btn-primary" id="loginBtn">Login</button>
+                <div class="user-avatar" id="userAvatar" style="display: none;">
+                    <i class="fas fa-user"></i>
+                    <div class="user-dropdown" id="userDropdown">
+                        <a href="#" id="dashboardLink">Dashboard</a>
+                        <a href="#" id="logoutBtn">Logout</a>
+                    </div>
+                </div>
+            </div>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Slider -->
+    <section id="home" class="hero">
+        <div class="slider-container">
+            <div class="slide active" style="background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80');">
+                <div class="slide-content">
+                    <h1>Where Ideas Become Reality</h1>
+                    <p>Fostering innovation, creativity, and technological advancement at our college</p>
+                    <div class="cta-buttons">
+                        <a href="#events" class="btn btn-primary">Upcoming Events</a>
+                        <a href="#contact" class="btn btn-secondary">Join Us</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1768&q=80');">
+                <div class="slide-content">
+                    <h1>Innovate. Create. Transform.</h1>
+                    <p>Join our community of innovators and shape the future of technology</p>
+                    <div class="cta-buttons">
+                        <a href="#features" class="btn btn-primary">Explore Features</a>
+                        <a href="#projects" class="btn btn-secondary">View Projects</a>
+                    </div>
+                </div>
+            </div>
+            <div class="slide" style="background-image: url('https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');">
+                <div class="slide-content">
+                    <h1>Build Your Future Today</h1>
+                    <p>Access cutting-edge technology and mentorship to bring your ideas to life</p>
+                    <div class="cta-buttons">
+                        <a href="#events" class="btn btn-primary">Register Now</a>
+                        <a href="#team" class="btn btn-secondary">Meet Our Team</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <div class="slider-dot active" data-slide="0"></div>
+            <div class="slider-dot" data-slide="1"></div>
+            <div class="slider-dot" data-slide="2"></div>
+        </div>
+    </section>
+
+    <!-- User Dashboard Section -->
+    <section id="dashboard" class="dashboard">
+        <div class="dashboard-header">
+            <h2>Welcome Back, Innovator!</h2>
+            <p>Here's your personalized dashboard with all your activities and achievements</p>
+        </div>
+        
+        <div class="user-stats">
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-calendar-check"></i>
+                </div>
+                <h3>5</h3>
+                <p>Events Registered</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3>3</h3>
+                <p>Competitions Won</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-project-diagram"></i>
+                </div>
+                <h3>2</h3>
+                <p>Projects Completed</p>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h3>8</h3>
+                <p>Certificates Earned</p>
+            </div>
+        </div>
+        
+        <div class="user-activities">
+            <div class="activity-card">
+                <div class="activity-header">
+                    <div class="activity-title">InnovateX Hackathon</div>
+                    <div class="activity-status status-registered">Registered</div>
+                </div>
+                <div class="activity-details">
+                    <p><i class="fas fa-calendar"></i> October 15, 2023</p>
+                    <p><i class="fas fa-clock"></i> 24 Hours</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Main Hall</p>
+                </div>
+                <p>Flagship hackathon with $5000 prize pool</p>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-header">
+                    <div class="activity-title">AI & Machine Learning Workshop</div>
+                    <div class="activity-status status-completed">Completed</div>
+                </div>
+                <div class="activity-details">
+                    <p><i class="fas fa-calendar"></i> October 8, 2023</p>
+                    <p><i class="fas fa-clock"></i> 3 Hours</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Lab A</p>
+                </div>
+                <p>Certificate earned: AI Fundamentals</p>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-header">
+                    <div class="activity-title">Robotics Challenge</div>
+                    <div class="activity-status status-upcoming">Upcoming</div>
+                </div>
+                <div class="activity-details">
+                    <p><i class="fas fa-calendar"></i> October 30, 2023</p>
+                    <p><i class="fas fa-clock"></i> 1 Day</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Robotics Lab</p>
+                </div>
+                <p>Team-based robotics competition</p>
+            </div>
+            
+            <div class="activity-card">
+                <div class="activity-header">
+                    <div class="activity-title">Smart Campus Initiative</div>
+                    <div class="activity-status status-completed">Completed</div>
+                </div>
+                <div class="activity-details">
+                    <p><i class="fas fa-calendar"></i> September 20, 2023</p>
+                    <p><i class="fas fa-users"></i> Team of 4</p>
+                    <p><i class="fas fa-tag"></i> IoT Project</p>
+                </div>
+                <p>IoT-based campus optimization system</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Our Hub</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Innovate. Create. Transform.</h3>
+                <p>The Innovation Hub at our college is a dynamic space where students, faculty, and industry collaborators come together to turn ideas into impactful solutions. We provide resources, mentorship, and a collaborative environment to foster groundbreaking innovations.</p>
+                <p>Our mission is to cultivate a culture of creativity, critical thinking, and entrepreneurial spirit among students, preparing them to tackle real-world challenges with innovative approaches.</p>
+                <p>Equipped with state-of-the-art technology and guided by experienced mentors, we empower the next generation of innovators to shape the future.</p>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Innovation Hub">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features">
+        <h2 class="section-title">What We Offer</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-microchip"></i>
+                </div>
+                <h3>Cutting-Edge Tech</h3>
+                <p>Access to the latest technologies including 3D printers, VR equipment, robotics kits, and advanced computing resources.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>Collaborative Spaces</h3>
+                <p>Flexible workspaces designed to foster teamwork, brainstorming sessions, and cross-disciplinary collaboration.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3>Expert Mentorship</h3>
+                <p>Guidance from industry professionals, faculty experts, and successful entrepreneurs to help refine your ideas.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-rocket"></i>
+                </div>
+                <h3>Startup Incubation</h3>
+                <p>Support for turning innovative projects into viable startups with funding opportunities and business development resources.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h3>Events & Workshops</h3>
+                <p>Regular hackathons, innovation challenges, workshops, and guest lectures to keep you inspired and learning.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <h3>Industry Connections</h3>
+                <p>Networking opportunities with industry leaders, potential employers, and innovation ecosystems beyond campus.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="events">
+        <h2 class="section-title">Events & Activities</h2>
+        <div class="events-container">
+            <div class="event-tabs">
+                <button class="tab-btn active" data-tab="hackathons">Hackathons</button>
+                <button class="tab-btn" data-tab="workshops">Workshops</button>
+                <button class="tab-btn" data-tab="competitions">Competitions</button>
+                <button class="tab-btn" data-tab="guest-lectures">Guest Lectures</button>
+            </div>
+            
+            <div id="hackathons" class="tab-content active">
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Hackathon">
+                            <div class="event-date">
+                                <span class="day">15</span>
+                                <span class="month">OCT</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>InnovateX Hackathon</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>24 Hours</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Main Hall</span>
+                            </div>
+                            <p>Join our flagship 24-hour hackathon where teams compete to build innovative solutions for real-world problems. Open to all students with exciting prizes and internship opportunities!</p>
+                            <div class="event-tags">
+                                <span class="tag">Coding</span>
+                                <span class="tag">AI/ML</span>
+                                <span class="tag">IoT</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-trophy"></i> $5000 Prize Pool</span>
+                                <a href="#" class="btn btn-primary">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1768&q=80" alt="Hackathon">
+                            <div class="event-date">
+                                <span class="day">05</span>
+                                <span class="month">NOV</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Green Tech Challenge</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>48 Hours</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Innovation Lab</span>
+                            </div>
+                            <p>Focus on sustainability and environmental solutions in this special edition hackathon. Develop technologies that address climate change and promote green practices.</p>
+                            <div class="event-tags">
+                                <span class="tag">Sustainability</span>
+                                <span class="tag">Environment</span>
+                                <span class="tag">Clean Tech</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-trophy"></i> $3000 Prize Pool</span>
+                                <a href="#" class="btn btn-primary">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Hackathon">
+                            <div class="event-date">
+                                <span class="day">20</span>
+                                <span class="month">DEC</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>FinTech Revolution</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>36 Hours</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Tech Center</span>
+                            </div>
+                            <p>Build the future of finance in this intensive hackathon focused on blockchain, digital payments, and financial inclusion. Mentors from leading financial institutions will guide participants.</p>
+                            <div class="event-tags">
+                                <span class="tag">Blockchain</span>
+                                <span class="tag">Finance</span>
+                                <span class="tag">Security</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-trophy"></i> $7500 Prize Pool</span>
+                                <a href="#" class="btn btn-primary">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="workshops" class="tab-content">
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1543286386-713bdd548da4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Workshop">
+                            <div class="event-date">
+                                <span class="day">08</span>
+                                <span class="month">OCT</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>AI & Machine Learning Workshop</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>3 Hours</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Lab A</span>
+                            </div>
+                            <p>Learn the fundamentals of AI and ML in this hands-on workshop. No prior experience required. Participants will build their first ML model by the end of the session.</p>
+                            <div class="event-tags">
+                                <span class="tag">Beginner Friendly</span>
+                                <span class="tag">Hands-on</span>
+                                <span class="tag">Certificate</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-users"></i> Limited Seats</span>
+                                <a href="#" class="btn btn-primary">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Workshop">
+                            <div class="event-date">
+                                <span class="day">22</span>
+                                <span class="month">OCT</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>VR/AR Development Bootcamp</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>2 Days</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>VR Lab</span>
+                            </div>
+                            <p>Dive into the world of virtual and augmented reality in this intensive bootcamp. Learn to create immersive experiences using Unity and industry-standard tools.</p>
+                            <div class="event-tags">
+                                <span class="tag">Intermediate</span>
+                                <span class="tag">Project-based</span>
+                                <span class="tag">Equipment Provided</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-certificate"></i> Certificate</span>
+                                <a href="#" class="btn btn-primary">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Workshop">
+                            <div class="event-date">
+                                <span class="day">12</span>
+                                <span class="month">NOV</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Entrepreneurship 101</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>4 Hours</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Conference Room</span>
+                            </div>
+                            <p>Learn how to transform your ideas into successful businesses. This workshop covers business planning, funding strategies, and pitching to investors.</p>
+                            <div class="event-tags">
+                                <span class="tag">Business</span>
+                                <span class="tag">Startup</span>
+                                <span class="tag">Networking</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-users"></i> Open to All</span>
+                                <a href="#" class="btn btn-primary">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="competitions" class="tab-content">
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Competition">
+                            <div class="event-date">
+                                <span class="day">30</span>
+                                <span class="month">OCT</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Robotics Challenge</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>1 Day</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Robotics Lab</span>
+                            </div>
+                            <p>Design, build, and program robots to complete specific challenges. Teams will compete in various categories including line following, obstacle avoidance, and task completion.</p>
+                            <div class="event-tags">
+                                <span class="tag">Robotics</span>
+                                <span class="tag">Programming</span>
+                                <span class="tag">Team Event</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-trophy"></i> $2000 Prize Pool</span>
+                                <a href="#" class="btn btn-primary">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Competition">
+                            <div class="event-date">
+                                <span class="day">15</span>
+                                <span class="month">NOV</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>App Development Contest</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>2 Weeks</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Online</span>
+                            </div>
+                            <p>Create innovative mobile applications that solve real-world problems. This competition runs for two weeks with weekly check-ins and mentorship opportunities.</p>
+                            <div class="event-tags">
+                                <span class="tag">Mobile Dev</span>
+                                <span class="tag">UI/UX</span>
+                                <span class="tag">Innovation</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-trophy"></i> $3500 Prize Pool</span>
+                                <a href="#" class="btn btn-primary">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Competition">
+                            <div class="event-date">
+                                <span class="day">05</span>
+                                <span class="month">DEC</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Innovation Pitch Fest</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>1 Day</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Auditorium</span>
+                            </div>
+                            <p>Pitch your innovative ideas to a panel of investors and industry experts. Winners receive seed funding and mentorship to develop their concepts further.</p>
+                            <div class="event-tags">
+                                <span class="tag">Pitching</span>
+                                <span class="tag">Funding</span>
+                                <span class="tag">Mentorship</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-trophy"></i> $10000 Seed Funding</span>
+                                <a href="#" class="btn btn-primary">Register Now</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div id="guest-lectures" class="tab-content">
+                <div class="events-grid">
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Guest Lecture">
+                            <div class="event-date">
+                                <span class="day">10</span>
+                                <span class="month">OCT</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>The Future of AI</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>2 Hours</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Main Auditorium</span>
+                            </div>
+                            <p>Join Dr. Sarah Johnson, AI Research Director at TechCorp, as she discusses the latest advancements in artificial intelligence and its impact on various industries.</p>
+                            <div class="event-tags">
+                                <span class="tag">AI/ML</span>
+                                <span class="tag">Research</span>
+                                <span class="tag">Industry Trends</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-users"></i> Open to Public</span>
+                                <a href="#" class="btn btn-primary">RSVP</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Guest Lecture">
+                            <div class="event-date">
+                                <span class="day">25</span>
+                                <span class="month">OCT</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>From Campus to Startup</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>1.5 Hours</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Conference Hall</span>
+                            </div>
+                            <p>Michael Chen, founder of InnovateX and our alumni, shares his journey from college student to successful entrepreneur and offers insights into building a startup.</p>
+                            <div class="event-tags">
+                                <span class="tag">Entrepreneurship</span>
+                                <span class="tag">Startup Journey</span>
+                                <span class="tag">Alumni</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-users"></i> Limited Seats</span>
+                                <a href="#" class="btn btn-primary">RSVP</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="event-card">
+                        <div class="event-img">
+                            <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Guest Lecture">
+                            <div class="event-date">
+                                <span class="day">18</span>
+                                <span class="month">NOV</span>
+                            </div>
+                        </div>
+                        <div class="event-content">
+                            <h3>Sustainable Tech Solutions</h3>
+                            <div class="event-meta">
+                                <i class="fas fa-clock"></i>
+                                <span>2 Hours</span>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Green Hall</span>
+                            </div>
+                            <p>Environmental scientist and tech innovator Dr. Priya Sharma discusses how technology can address climate change and create a sustainable future.</p>
+                            <div class="event-tags">
+                                <span class="tag">Sustainability</span>
+                                <span class="tag">Environment</span>
+                                <span class="tag">Innovation</span>
+                            </div>
+                            <div class="event-footer">
+                                <span class="event-prize"><i class="fas fa-users"></i> Open to Public</span>
+                                <a href="#" class="btn btn-primary">RSVP</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2 class="section-title">Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Smart Campus">
+                </div>
+                <div class="project-content">
+                    <h3>Smart Campus Initiative</h3>
+                    <p>IoT-based system optimizing energy usage, resource allocation, and campus navigation for enhanced student experience.</p>
+                    <div class="project-tags">
+                        <span class="tag">IoT</span>
+                        <span class="tag">Sustainability</span>
+                        <span class="tag">Mobile App</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Healthcare AI">
+                </div>
+                <div class="project-content">
+                    <h3>Healthcare AI Assistant</h3>
+                    <p>Machine learning model for early disease detection using medical imaging with 92% accuracy in preliminary trials.</p>
+                    <div class="project-tags">
+                        <span class="tag">AI/ML</span>
+                        <span class="tag">Healthcare</span>
+                        <span class="tag">Research</span>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-img">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="EduTech Platform">
+                </div>
+                <div class="project-content">
+                    <h3>EduTech VR Platform</h3>
+                    <p>Virtual reality educational platform making complex subjects immersive and interactive for enhanced learning.</p>
+                    <div class="project-tags">
+                        <span class="tag">VR/AR</span>
+                        <span class="tag">EdTech</span>
+                        <span class="tag">Gaming</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="team">
+        <h2 class="section-title">Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-member">
+                <div class="member-img">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>Dr. Sarah Johnson</h3>
+                    <p>Director</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-img">
+                    <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>Michael Chen</h3>
+                    <p>Tech Lead</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-img">
+                    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=688&q=80" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>Priya Sharma</h3>
+                    <p>Program Coordinator</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="team-member">
+                <div class="member-img">
+                    <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80" alt="Team Member">
+                </div>
+                <div class="member-info">
+                    <h3>David Rodriguez</h3>
+                    <p>Industry Liaison</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Get In Touch</h2>
+        <div class="contact-container">
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" required>
+                </div>
+                <div class="form-group">
+                    <label for="interest">Area of Interest</label>
+                    <input type="text" id="interest" name="interest" placeholder="e.g., AI, Robotics, Entrepreneurship">
+                </div>
+                <div class="form-group full-width">
+                    <label for="message">Your Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <i class="fas fa-lightbulb"></i> Innovation Hub
+            </div>
+            <ul class="footer-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="social-footer">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+            </div>
+            <p class="copyright">&copy; 2023 College Innovation Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Login/Register Modal -->
+    <div id="authModal" class="modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modalClose">&times;</button>
+            <div class="modal-header">
+                <h2>Welcome to Innovation Hub</h2>
+                <p>Join our community of innovators</p>
+            </div>
+            <div class="modal-tabs">
+                <button class="modal-tab active" data-form="login">Login</button>
+                <button class="modal-tab" data-form="register">Register</button>
+            </div>
+            <form id="loginForm" class="modal-form active">
+                <div class="form-group-modal">
+                    <label for="loginEmail">Email</label>
+                    <input type="email" id="loginEmail" required>
+                </div>
+                <div class="form-group-modal">
+                    <label for="loginPassword">Password</label>
+                    <input type="password" id="loginPassword" required>
+                </div>
+                <button type="submit" class="btn-modal">Login</button>
+            </form>
+            <form id="registerForm" class="modal-form">
+                <div class="form-group-modal">
+                    <label for="registerName">Full Name</label>
+                    <input type="text" id="registerName" required>
+                </div>
+                <div class="form-group-modal">
+                    <label for="registerEmail">Email</label>
+                    <input type="email" id="registerEmail" required>
+                </div>
+                <div class="form-group-modal">
+                    <label for="registerPassword">Password</label>
+                    <input type="password" id="registerPassword" required>
+                </div>
+                <div class="form-group-modal">
+                    <label for="registerConfirm">Confirm Password</label>
+                    <input type="password" id="registerConfirm" required>
+                </div>
+                <button type="submit" class="btn-modal">Register</button>
+            </form>
+        </div>
     </div>
 
-    <!-- Hero -->
-    <section class="section" id="home">
-      <div class="card">
-        <div class="badge">Student Built</div>
-        <h1>Support. Build. Launch.</h1>
-        <p>Student-run Innovation Hub at JIIT helping founders with startup ideas, hackathons, and early validation.</p>
-        <div class="flex" style="gap:10px;">
-          <button class="btn">Apply Your Startup</button>
-          <button class="btn btn-light">Join Hackathon</button>
-        </div>
-      </div>
-    </section>
+    <!-- Toast Notification -->
+    <div id="toast" class="toast">
+        <i class="fas fa-check-circle"></i>
+        <span id="toast-message">Success!</span>
+    </div>
 
-    <!-- Startup Submission -->
-    <section class="section" id="startups">
-      <div>
-        <h2>Startup Program</h2>
-        <p class="small">Submit your idea, get early feedback, and join the student network.</p>
-        <div class="card">
-          <form id="startup-form">
-            <div style="margin-bottom:10px;">
-              <label>Name of Startup</label>
-              <input class="input" name="name" placeholder="Example: SkillSwap" required />
-            </div>
-            <div style="margin-bottom:10px;">
-              <label>Problem You're Solving</label>
-              <textarea class="input" name="problem" rows="3" placeholder="Describe the core problem" required></textarea>
-            </div>
-            <div style="display:flex; gap:12px; flex-wrap:wrap; margin-bottom:10px;">
-              <div style="flex:1; min-width:140px;">
-                <label>Stage</label>
-                <select class="input" name="stage">
-                  <option>Idea</option>
-                  <option>Validation</option>
-                  <option>Prototype</option>
-                  <option>Early Revenue</option>
-                </select>
-              </div>
-              <div style="flex:1; min-width:140px;">
-                <label>Founders</label>
-                <input class="input" name="founders" placeholder="Names, comma separated" required />
-              </div>
-            </div>
-            <div style="margin-bottom:10px;">
-              <label>Contact Email</label>
-              <input class="input" name="email" type="email" placeholder="you@domain.com" required />
-            </div>
-            <button class="btn" type="submit">Submit Startup</button>
-            <div id="startup-msg" class="small" style="margin-top:6px;"></div>
-          </form>
-        </div>
-      </div>
-    </section>
-
-    <!-- Spotlight -->
-    <section class="section" id="spotlight">
-      <div class="card">
-        <h2>Current Startup Spotlight</h2>
-        <div class="startup-spotlight">
-          <div>
-            <p class="small">Team: Campus Skill Swap</p>
-            <p>Peer-to-peer skill exchange platform helping students collaborate and earn reputation.</p>
-            <div class="inline-badges">
-              <div class="pill">Validation</div>
-              <div class="pill">Team: 3</div>
-              <div class="pill">Submitted: 5d ago</div>
-            </div>
-          </div>
-          <div style="margin-top:8px;">
-            <button class="btn">View Details</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Hackathons -->
-    <section class="section" id="hackathons">
-      <div>
-        <h2>Hackathons & Sprints</h2>
-        <p class="small">Build fast, pitch early, win support.</p>
-        <div class="grid grid-3">
-          <div class="card">
-            <div class="badge">Hackathon</div>
-            <h3>Pioneers Paradise 2025</h3>
-            <p class="small">24 Aug | Oscar Luxe Club | 48hr sprint + prizes</p>
-            <button class="btn">Register</button>
-          </div>
-          <div class="card">
-            <div class="badge">Challenge</div>
-            <h3>Startup Sprint</h3>
-            <p class="small">10 Sept | MVP build + showcase</p>
-            <button class="btn">Apply</button>
-          </div>
-          <div class="card">
-            <div class="badge">Mini</div>
-            <h3>Pitch Feedback</h3>
-            <p class="small">Weekly quick feedback session</p>
-            <button class="btn">Join</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Resources -->
-    <section class="section" id="resources">
-      <div>
-        <h2>Resources</h2>
-        <p class="small">Templates & guides for early-stage founders.</p>
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Validation Checklist</h3>
-            <p class="small">Step-by-step to confirm the problem exists.</p>
-          </div>
-          <div class="card">
-            <h3>Pitch Deck</h3>
-            <p class="small">What to include for your demo day.</p>
-          </div>
-          <div class="card">
-            <h3>Team Tips</h3>
-            <p class="small">Roles, collaboration, equity basics.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team -->
-    <section class="section" id="team">
-      <div>
-        <h2>Team</h2>
-        <p class="small">Students building this platform.</p>
-        <div class="grid grid-3">
-          <div class="card">
-            <h3>Rahul Verma</h3>
-            <p class="small">Design & Frontend</p>
-          </div>
-          <div class="card">
-            <h3>Simran Kaur</h3>
-            <p class="small">Operations</p>
-          </div>
-          <div class="card">
-            <h3>Akshay Singh</h3>
-            <p class="small">Deployment</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section class="section" id="contact">
-      <div class="card">
-        <h2>Contact</h2>
-        <p class="small">Want to join, help, or get featured? Send a message.</p>
-        <form id="contact-form">
-          <div style="display:flex; flex-direction:column; gap:12px;">
-            <div>
-              <label>Name</label>
-              <input class="input" name="name" required />
-            </div>
-            <div>
-              <label>Email</label>
-              <input class="input" type="email" name="email" required />
-            </div>
-            <div>
-              <label>Message</label>
-              <textarea class="input" name="message" rows="3" required></textarea>
-            </div>
-          </div>
-          <button class="btn" type="submit">Send</button>
-          <div id="contact-msg" class="small" style="margin-top:6px;"></div>
-        </form>
-        <p class="small" style="margin-top:14px;">© 2025 Innovation Hub Student Startup Project, JIIT Noida.</p>
-      </div>
-    </section>
-  </div>
-
-  <script>
-    // menu toggle
-    const toggle = document.getElementById('toggleMenu');
-    const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => {
-      links.classList.toggle('show');
-    });
-
-    // placeholder form handlers
-    document.getElementById('startup-form')?.addEventListener('submit', function(e){
-      e.preventDefault();
-      document.getElementById('startup-msg').textContent = 'Thanks! Your startup idea is recorded (hook real backend later).';
-    });
-    document.getElementById('contact-form')?.addEventListener('submit', function(e){
-      e.preventDefault();
-      document.getElementById('contact-msg').textContent = 'Message received! (connect to real API soon).';
-    });
-  </script>
+    <script>
+        // Hero Slider
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.slide');
+            const dots = document.querySelectorAll('.slider-dot');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                slides.forEach(slide => slide.classList.remove('active'));
+                dots.forEach(dot => dot.classList.remove('active'));
+                
+                slides[index].classList.add('active');
+                dots[index].classList.add('active');
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Auto-advance slides
+            setInterval(nextSlide, 5000);
+            
+            // Manual slide navigation
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => {
+                    currentSlide = index;
+                    showSlide(currentSlide);
+                });
+            });
+            
+            // Tab functionality for events section
+            const tabBtns = document.querySelectorAll('.tab-btn');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons and contents
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    // Show corresponding content
+                    const tabId = btn.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Authentication Modal
+            const loginBtn = document.getElementById('loginBtn');
+            const authModal = document.getElementById('authModal');
+            const modalClose = document.getElementById('modalClose');
+            const modalTabs = document.querySelectorAll('.modal-tab');
+            const modalForms = document.querySelectorAll('.modal-form');
+            const userAvatar = document.getElementById('userAvatar');
+            const userDropdown = document.getElementById('userDropdown');
+            const dashboardLink = document.getElementById('dashboardLink');
+            const logoutBtn = document.getElementById('logoutBtn');
+            const dashboardSection = document.getElementById('dashboard');
+            
+            // Open modal
+            loginBtn.addEventListener('click', () => {
+                authModal.classList.add('active');
+            });
+            
+            // Close modal
+            modalClose.addEventListener('click', () => {
+                authModal.classList.remove('active');
+            });
+            
+            // Modal tabs
+            modalTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    modalTabs.forEach(t => t.classList.remove('active'));
+                    modalForms.forEach(f => f.classList.remove('active'));
+                    
+                    tab.classList.add('active');
+                    const formId = tab.getAttribute('data-form') + 'Form';
+                    document.getElementById(formId).classList.add('active');
+                });
+            });
+            
+            // Login form submission
+            document.getElementById('loginForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const email = document.getElementById('loginEmail').value;
+                
+                // Simulate login
+                authModal.classList.remove('active');
+                loginBtn.style.display = 'none';
+                userAvatar.style.display = 'flex';
+                
+                showToast(`Welcome back, ${email}!`);
+                
+                // Reset form
+                document.getElementById('loginForm').reset();
+            });
+            
+            // Register form submission
+            document.getElementById('registerForm').addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('registerName').value;
+                
+                // Simulate registration
+                authModal.classList.remove('active');
+                loginBtn.style.display = 'none';
+                userAvatar.style.display = 'flex';
+                
+                showToast(`Welcome to Innovation Hub, ${name}!`);
+                
+                // Reset form
+                document.getElementById('registerForm').reset();
+            });
+            
+            // User dropdown
+            userAvatar.addEventListener('click', () => {
+                userDropdown.classList.toggle('active');
+            });
+            
+            // Dashboard link
+            dashboardLink.addEventListener('click', (e) => {
+                e.preventDefault();
+                userDropdown.classList.remove('active');
+                dashboardSection.classList.add('active');
+                dashboardSection.scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            // Logout
+            logoutBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                userDropdown.classList.remove('active');
+                userAvatar.style.display = 'none';
+                loginBtn.style.display = 'block';
+                dashboardSection.classList.remove('active');
+                showToast('You have been logged out successfully!');
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!userAvatar.contains(e.target) && !userDropdown.contains(e.target)) {
+                    userDropdown.classList.remove('active');
+                }
+            });
+            
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        window.scrollTo({
+                            top: target.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Form submission
+            const contactForm = document.querySelector('.contact-form');
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Get form data
+                const formData = new FormData(this);
+                const name = formData.get('name');
+                
+                // Show toast notification
+                showToast(`Thank You, ${name}! Your message has been sent.`);
+                
+                // Reset form
+                this.reset();
+            });
+            
+            // Event registration
+            const registerBtns = document.querySelectorAll('.event-footer .btn-primary');
+            registerBtns.forEach(btn => {
+                btn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const eventName = this.closest('.event-content').querySelector('h3').textContent;
+                    
+                    // Check if user is logged in
+                    if (userAvatar.style.display === 'flex') {
+                        showToast(`You've registered for ${eventName} successfully!`);
+                    } else {
+                        showToast('Please login to register for events');
+                        authModal.classList.add('active');
+                    }
+                });
+            });
+            
+            // RSVP for guest lectures
+            const rsvpBtns = document.querySelectorAll('.event-footer .btn-primary');
+            rsvpBtns.forEach(btn => {
+                if (btn.textContent === 'RSVP') {
+                    btn.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const eventName = this.closest('.event-content').querySelector('h3').textContent;
+                        
+                        // Check if user is logged in
+                        if (userAvatar.style.display === 'flex') {
+                            showToast(`Your RSVP for ${eventName} has been confirmed!`);
+                        } else {
+                            showToast('Please login to RSVP for events');
+                            authModal.classList.add('active');
+                        }
+                    });
+                }
+            });
+            
+            // Toast notification function
+            function showToast(message) {
+                const toast = document.getElementById('toast');
+                const toastMessage = document.getElementById('toast-message');
+                
+                toastMessage.textContent = message;
+                toast.classList.add('show');
+                
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                }, 5000);
+            }
+            
+            // Header scroll effect
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('header');
+                if (window.scrollY > 100) {
+                    header.style.background = 'rgba(10, 10, 26, 0.95)';
+                    header.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+                } else {
+                    header.style.background = 'rgba(10, 10, 26, 0.9)';
+                    header.style.boxShadow = 'none';
+                }
+            });
+            
+            // Mobile menu toggle
+            const menuToggle = document.querySelector('.menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            
+            menuToggle.addEventListener('click', function() {
+                navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+                navLinks.style.position = 'absolute';
+                navLinks.style.top = '100%';
+                navLinks.style.left = '0';
+                navLinks.style.width = '100%';
+                navLinks.style.flexDirection = 'column';
+                navLinks.style.background = 'rgba(10, 10, 26, 0.95)';
+                navLinks.style.padding = '1rem 0';
+                navLinks.style.boxShadow = '0 5px 20px rgba(0, 0, 0, 0.3)';
+                
+                navLinks.querySelectorAll('li').forEach(li => {
+                    li.style.margin = '0.5rem 0';
+                    li.style.textAlign = 'center';
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
-
